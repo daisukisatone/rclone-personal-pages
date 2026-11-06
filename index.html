@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rclone Personal is a personal-use Google Drive synchronization configuration operated by daisukisatone with locally installed rclone and RClone Manager.">
+  <title>Rclone Personal — Personal Google Drive Synchronization</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f5f7fa; --card:#fff; --text:#18252f; --muted:#52616c; --accent:#096858; --line:#d8e2e8; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:17px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    main { max-width:850px; margin:48px auto; padding:36px; background:var(--card); border:1px solid var(--line); border-radius:18px; }
+    nav { display:flex; gap:24px; flex-wrap:wrap; margin-bottom:36px; }
+    a { color:var(--accent); text-underline-offset:.2em; }
+    a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    h1 { font-size:clamp(2rem,5vw,3rem); line-height:1.2; margin:8px 0 20px; }
+    h2 { font-size:1.3rem; margin:30px 0 8px; }
+    p { margin:12px 0; }
+    .eyebrow { color:var(--accent); font-size:.85rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .muted,footer { color:var(--muted); }
+    .notice { padding:16px 20px; border-left:4px solid var(--accent); background:var(--bg); border-radius:4px; }
+    footer { margin-top:32px; padding-top:20px; border-top:1px solid var(--line); font-size:.9rem; }
+    @media (max-width:600px) { main { margin:16px; padding:24px; } }
+    @media (prefers-color-scheme:dark) { :root { --bg:#111a21; --card:#18242d; --text:#e6eef3; --muted:#adbdc8; --accent:#78d9ba; --line:#32434f; } }
+  </style>
+</head>
+<body>
+<main>
+  <nav aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="privacy.html">Privacy policy</a></nav>
+  <header>
+    <p class="eyebrow">Personal use · Local application</p>
+    <h1>Rclone Personal</h1>
+    <p>Personal Google Drive file synchronization, operated by <a href="https://github.com/daisukisatone">daisukisatone</a> using locally installed <a href="https://rclone.org/">rclone</a> and <a href="https://github.com/Zarestia-Dev/rclone-manager">RClone Manager</a>.</p>
+  </header>
+  <p class="notice" lang="zh-CN">这是个人自用的 Google Drive 同步配置说明页面，用于说明 OAuth 应用的用途和数据处理方式。此网站不提供网盘登录、文件上传或账号注册功能。</p>
+  <section aria-labelledby="purpose">
+    <h2 id="purpose">What this application does</h2>
+    <p>The installed desktop tools synchronize files between the owner's Google Drive and a locally configured folder. Depending on the owner's settings, synchronization may download, upload, update, rename or delete files to keep the selected locations in agreement.</p>
+    <p>This is an independent personal configuration, not a public file-storage service and not an official Google service. This website contains information only; it does not run the synchronization engine.</p>
+  </section>
+  <section aria-labelledby="permissions">
+    <h2 id="permissions">Google account access</h2>
+    <p>The desktop application uses Google OAuth to obtain the owner's consent. Full Drive access is requested so rclone can synchronize existing files and folders, including files not originally created by this application.</p>
+    <p>The OAuth grant can permit access to all files in the authorized Drive account. The paths and filters configured locally determine what is actually synchronized. No Google password is entered into this website.</p>
+  </section>
+  <section aria-labelledby="data">
+    <h2 id="data">Data handling</h2>
+    <p>Drive files, metadata and authorization tokens are handled by Google and the owner's locally installed tools. This project does not operate a separate server that receives the owner's Drive contents. This website never asks for OAuth tokens or client secrets.</p>
+    <p>Read the <a href="privacy.html">privacy policy</a> for details about access, storage, retention and revoking authorization.</p>
+  </section>
+  <section aria-labelledby="contact">
+    <h2 id="contact">Owner and contact</h2>
+    <p>Maintained by <a href="https://github.com/daisukisatone">daisukisatone</a>. Questions about these pages can be submitted through the <a href="https://github.com/daisukisatone/rclone-personal-pages/issues">website repository's issue tracker</a>. Do not include credentials, private files or account identifiers in a public issue.</p>
+  </section>
+  <footer>Last updated: November 5, 2026 · <a href="privacy.html">Privacy policy</a></footer>
+</main>
+</body>
+</html>
